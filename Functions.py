@@ -22,3 +22,39 @@ def multiply(num1, num2):
 def divide(num1, num2):
     """Divides"""
     return num1 / num2
+
+def calculate(first_num, second_num, operation):
+    """Calculates two numbers, does addition, subtraction, multiplication, and division"""
+    if operation == '+':
+        answer = add(first_num, second_num)
+    elif operation == '-':
+        answer = subtract(first_num, second_num)
+    elif operation == '*':
+        answer = multiply(first_num, second_num)
+    elif operation == '/':
+        answer = divide(first_num, second_num)
+    else:
+        print("An invalid operation has been given")
+    return answer
+
+def ask_for_input():
+    """Asks the user for a first number, an operation, and a second number, returns a dictionary with those three items as values"""
+    the_dict = {}
+    first_num = float(input("First num: "))
+    the_dict["first_num"] = first_num
+    print(" + \n - \n * \n /")
+    operation = input("Operation: ")
+    if operation == '':
+        while operation == '':
+            operation = print("An operation is needed: ")
+            the_dict["operation"] = operation
+    else:
+        the_dict["operation"] = operation
+    second_num = float(input("Second num: "))
+    the_dict["second_num"] = second_num
+    return the_dict
+# def require_input(string):
+#     if string == '':
+#         while string == '':
+#             return input("An input is needed")
+

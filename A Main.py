@@ -2,25 +2,17 @@
 # import tkinter as tk
 from Functions import *
 
-first_num = float(input("First num: "))
-print(" + \n - \n * \n /")
-operation = input("Operation: ")
+dict_input = ask_for_input()
+first_num = dict_input["first_num"]
+operation = dict_input["operation"]
+second_num = dict_input["second_num"]
 
-if operation == '':
-    while operation == '':
-        operation = print("An operation is needed: ")
-        
-second_num = float(input("Second num: "))
-
-if operation == '+':
-    answer = add(first_num, second_num)
-elif operation == '-':
-    answer = subtract(first_num, second_num)
-elif operation == '*':
-    answer = multiply(first_num, second_num)
-elif operation == '/':
-    answer = divide(first_num, second_num)
-else:
-    print("An invalid operation has been given")
-
+answer = calculate(first_num, second_num, operation)
 print(f"{first_num} {operation} {second_num} = {answer}")
+
+# cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation")
+# if cont == 'y':
+
+   
+
+# print(ask_for_input())
