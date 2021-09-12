@@ -2,14 +2,17 @@
 # import tkinter as tk
 from Functions import *
 
-first_num = int(input("First num: "))
+first_num = float(input("First num: "))
 print(" + \n - \n * \n /")
 operation = input("Operation: ")
-second_num = int(input("Second num: "))
 
 if operation == '':
-    print("An operation is needed")
-elif operation == '+':
+    while operation == '':
+        operation = print("An operation is needed: ")
+        
+second_num = float(input("Second num: "))
+
+if operation == '+':
     answer = add(first_num, second_num)
 elif operation == '-':
     answer = subtract(first_num, second_num)
