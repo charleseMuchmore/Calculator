@@ -1,18 +1,26 @@
 # from tkinter import *
 # import tkinter as tk
 from Functions import *
+cont = 'n'
+dictio = ask_for_input(cont)
+answer = give_input(dictio["first_num"], dictio, "first_num")
 
-dict_input = ask_for_input()
-first_num = dict_input["first_num"]
-operation = dict_input["operation"]
-second_num = dict_input["second_num"]
-
-answer = calculate(first_num, second_num, operation)
-print(f"{first_num} {operation} {second_num} = {answer}")
-
-# cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation")
-# if cont == 'y':
-
+cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
+while cont == 'y':
+    dictio = ask_for_input(cont)
+    print(f"dictio first is {dictio}")
+    dictio["answer"] = answer
+    answer = give_input(answer, dictio, "answer")
+    cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
    
+while cont == 'n':
+    clear()
+    dictio = ask_for_input('n')
+    give_input(dictio["first_num"], dictio, dictio["first_num"])
+    cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
 
-# print(ask_for_input())
+
+
+
+#todo:
+#Create a way to repeat the code as many times as the user likes

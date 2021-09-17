@@ -24,7 +24,7 @@ def divide(num1, num2):
     return num1 / num2
 
 def calculate(first_num, second_num, operation):
-    """Calculates two numbers, does addition, subtraction, multiplication, and division"""
+    """Calculates two numbers, does addition, subtraction, multiplication, and division, returns a dictionary with the user inputs, and answer"""
     if operation == '+':
         answer = add(first_num, second_num)
     elif operation == '-':
@@ -35,13 +35,14 @@ def calculate(first_num, second_num, operation):
         answer = divide(first_num, second_num)
     else:
         print("An invalid operation has been given")
-    return answer
+    return float(answer)
 
-def ask_for_input():
+def ask_for_input(cont):
     """Asks the user for a first number, an operation, and a second number, returns a dictionary with those three items as values"""
     the_dict = {}
-    first_num = float(input("First num: "))
-    the_dict["first_num"] = first_num
+    if cont == 'n':
+        first_num = float(input("First num: "))
+        the_dict["first_num"] = first_num
     print(" + \n - \n * \n /")
     operation = input("Operation: ")
     if operation == '':
@@ -53,6 +54,15 @@ def ask_for_input():
     second_num = float(input("Second num: "))
     the_dict["second_num"] = second_num
     return the_dict
+
+def give_input(num, dict_input, param1):
+    # dict_input = ask_for_input()
+    first_num = num
+    operation = dict_input["operation"]
+    second_num = dict_input["second_num"]
+    answer = calculate(dict_input[param1], dict_input["second_num"], dict_input["operation"])
+    print(f"{first_num} {operation} {second_num} = {answer}")
+    return answer
 # def require_input(string):
 #     if string == '':
 #         while string == '':
