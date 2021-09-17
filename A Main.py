@@ -19,8 +19,3 @@ while cont == 'n':
     give_input(dictio["first_num"], dictio, dictio["first_num"])
     cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
 
-
-
-
-#todo:
-#Create a way to repeat the code as many times as the user likes
