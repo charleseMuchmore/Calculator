@@ -1,4 +1,5 @@
 from os import system, name
+from Afunctions import *
 
 def clear():
     """Clears the terminal"""
@@ -6,39 +7,6 @@ def clear():
         _=system('cls')
     else:
         _=system('clear')
-
-def add(num1, num2):
-    """Adds"""
-    return num1 + num2
-
-def subtract(num1, num2):
-    """Subtracts"""
-    return num1 - num2
-
-def multiply(num1, num2):
-    """Multiplies"""
-    return num1 * num2
-
-def divide(num1, num2):
-    """Divides"""
-    return num1 / num2
-
-def print_ops():
-    print(" + \n - \n * \n /")
-
-def calculate(first_num, second_num, operation):
-    """Calculates two numbers, does addition, subtraction, multiplication, and division, returns a dictionary with the user inputs, and answer"""
-    if operation == '+':
-        answer = add(first_num, second_num)
-    elif operation == '-':
-        answer = subtract(first_num, second_num)
-    elif operation == '*':
-        answer = multiply(first_num, second_num)
-    elif operation == '/':
-        answer = divide(first_num, second_num)
-    else:
-        print("An invalid operation has been given")
-    return float(answer)
 
 def ask_for_input(cont):
     """Asks the user for a first number, an operation, and a second number, returns a dictionary with those three items as values"""

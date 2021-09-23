@@ -1,6 +1,6 @@
 # from tkinter import *
 # import tkinter as tk
-from Functions import *
+from Bfunctions import *
 cont = 'n'
 dictio = ask_for_input(cont)
 answer = give_input(dictio["first_num"], dictio, "first_num")
