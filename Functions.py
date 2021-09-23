@@ -23,6 +23,9 @@ def divide(num1, num2):
     """Divides"""
     return num1 / num2
 
+def print_ops():
+    print(" + \n - \n * \n /")
+
 def calculate(first_num, second_num, operation):
     """Calculates two numbers, does addition, subtraction, multiplication, and division, returns a dictionary with the user inputs, and answer"""
     if operation == '+':
@@ -43,7 +46,7 @@ def ask_for_input(cont):
     if cont == 'n':
         first_num = float(input("First num: "))
         the_dict["first_num"] = first_num
-    print(" + \n - \n * \n /")
+    print_ops()
     operation = input("Operation: ")
     if operation == '':
         while operation == '':
@@ -56,6 +59,7 @@ def ask_for_input(cont):
     return the_dict
 
 def give_input(num, dict_input, param1):
+    # """takes a first number (num), a dictionary with the operation and second number, and"""
     # dict_input = ask_for_input()
     first_num = num
     operation = dict_input["operation"]

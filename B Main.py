@@ -14,7 +14,9 @@ while cont == 'y':
    
 while cont == 'n':
     clear()
+    dictio = {}
     dictio = ask_for_input('n')
-    give_input(dictio["first_num"], dictio, dictio["first_num"])
+    print(dictio)
+    give_input(dictio["first_num"], dictio, dictio["second_num"])
     cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
 
