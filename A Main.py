@@ -4,7 +4,7 @@ from Bfunctions import *
 # from test_functions import *
 cont = 'n'
 dictio = ask_for_input(cont)
-answer = give_input(dictio["first_num"], dictio, "first_num")
+answer = give_input(dictio["first_num"], dictio)
 cont = input(f"'y' to continue calculating with {answer}, 'n' to start a new calculation: ")
 while cont == 'n':
     clear()

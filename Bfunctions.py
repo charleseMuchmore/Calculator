@@ -25,7 +25,7 @@ def ask_for_input(cont):
     return the_dict
 def give_input(num, dict_input):
     """takes a first number (num), a dictionary containing the operation and second number, and"""
-    first_num = dict_input["first_num"] = float(num)
+    first_num = float(num)
     operation = dict_input["operation"]
     second_num = dict_input["second_num"]
     answer = calculate(first_num, operation, second_num)
